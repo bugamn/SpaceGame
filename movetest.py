@@ -40,6 +40,8 @@ def main():
 
 		keys = pygame.key.get_pressed()
 		speed = Vector(0,0)
+		if keys[pygame.K_a]:
+			shots.append(GameObject(beam, Vector(obj.pos.x, obj.pos.y), Vector(0, 20)))
 		if keys[pygame.K_UP]:
 			speed.y = -5
 		elif keys[pygame.K_DOWN]:
